@@ -18,5 +18,11 @@ router.post('/', function(req, res, next) {
   res.end(twiml.toString());
 });
 
+router.get('/', function(req, res, next) {
+
+  res.send("Nice try, but GET /sms is not supported by this example. Try using POST /sms for testing Twilio Webhook requests.")
+
+});
+
 module.exports = router;
 
